@@ -1,64 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Disemart Studio</title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
-      background: #0b0b0b;
-      color: #eaeaea;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .wrap {
-      max-width: 720px;
-      padding: 32px;
-      text-align: center;
-    }
-    h1 {
-      font-size: clamp(2.2rem, 6vw, 3.5rem);
-      font-weight: 600;
-      letter-spacing: -0.02em;
-      margin-bottom: 16px;
-    }
-    p {
-      font-size: 1.05rem;
-      line-height: 1.6;
-      color: #b5b5b5;
-      margin-bottom: 32px;
-    }
-    a {
-      display: inline-block;
-      padding: 12px 22px;
-      border: 1px solid #eaeaea;
-      color: #eaeaea;
-      text-decoration: none;
-      font-size: 0.95rem;
-      letter-spacing: 0.04em;
-      transition: all 0.2s ease;
-    }
-    a:hover {
-      background: #eaeaea;
-      color: #0b0b0b;
-    }
-    footer {
-      margin-top: 48px;
-      font-size: 0.75rem;
-      color: #666;
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Disemart Studio</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family: Inter, -apple-system, BlinkMacSystemFont, sans-serif;
+  background:#0a0a0a;
+  color:#eaeaea;
+  line-height:1.6;
+}
+a{color:inherit;text-decoration:none}
+img{width:100%;display:block}
+
+header{
+  position:fixed;
+  top:0;
+  width:100%;
+  background:rgba(10,10,10,.85);
+  backdrop-filter: blur(10px);
+  border-bottom:1px solid #222;
+}
+nav{
+  max-width:1100px;
+  margin:auto;
+  padding:16px 24px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+nav ul{
+  display:flex;
+  gap:20px;
+  list-style:none;
+  font-size:.9rem;
+}
+
+section{
+  max-width:1100px;
+  margin:auto;
+  padding:120px 24px;
+}
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+}
+.hero h1{
+  font-size:clamp(3rem,6vw,5rem);
+  margin-bottom:16px;
+}
+.hero p{max-width:520px;color:#aaa}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:20px;
+}
+.card{
+  border:1px solid #222;
+  padding:16px;
+}
+.card img{
+  aspect-ratio:4/3;
+  object-fit:cover;
+  background:#111;
+  margin-bottom:12px;
+}
+
+footer{
+  padding:60px 24px;
+  text-align:center;
+  border-top:1px solid #222;
+  color:#666;
+  font-size:.85rem;
+}
+</style>
 </head>
+
 <body>
-  <div class="wrap">
-    <h1>Disemart Studio</h1>
-    <p>Teardown artwork exploring form, structure, and the beauty inside machines.</p>
-    <a href="#">View Work</a>
-    <footer>© Disemart Studio</footer>
+
+<header>
+<nav>
+<strong>Disemart Studio</strong>
+<ul>
+  <li><a href="#about">About</a></li>
+  <li><a href="#artwork">Artwork</a></li>
+  <li><a href="#portfolio">Portfolio</a></li>
+  <li><a href="#care">Artwork Care</a></li>
+  <li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+</header>
+
+<section class="hero">
+  <div>
+    <h1>Teardown Art, Reimagined</h1>
+    <p>
+      Disemart Studio explores the inner beauty of machines through detailed teardown artwork — part art, part engineering, fully intentional.
+    </p>
   </div>
+</section>
+
+<section id="about">
+  <h2>About the Studio</h2>
+  <p>
+    Disemart Studio creates high-detail teardown artworks that reveal structure, function, and hidden aesthetics of everyday technology.
+  </p>
+</section>
+
+<section id="artwork">
+  <h2>Artwork</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="https://via.placeholder.com/600x450" alt="">
+      <p>Mechanical teardown composition</p>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/600x450" alt="">
+      <p>Industrial form study</p>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/600x450" alt="">
+      <p>Exploded view artwork</p>
+    </div>
+  </div>
+</section>
+
+<section id="portfolio">
+  <h2>Portfolio</h2>
+  <p>
+    Selected works, collaborations, and commissioned pieces from Disemart Studio.
+  </p>
+</section>
+
+<section id="care">
+  <h2>Artwork Care</h2>
+  <p>
+    Handling, framing, and preservation guidelines to ensure longevity of teardown artworks.
+  </p>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>
+    For commissions, collaborations, or inquiries:<br>
+    <strong>disemartstudio@gmail.com</strong>
+  </p>
+</section>
+
+<footer>
+© Disemart Studio
+</footer>
+
 </body>
 </html>
