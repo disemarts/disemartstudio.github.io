@@ -28,11 +28,9 @@
       line-height: 1.7;
     }
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
+    a { text-decoration: none; color: inherit; }
 
+    /* NAVBAR — SAME AS INDEX */
     header {
       position: sticky;
       top: 0;
@@ -54,13 +52,46 @@
     .menu {
       display: flex;
       gap: 2rem;
+      align-items: center;
       color: var(--muted);
     }
 
-    .menu a:hover {
+    .menu-item {
+      position: relative;
+      cursor: pointer;
+    }
+
+    .dropdown {
+      position: absolute;
+      top: 120%;
+      left: 0;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      min-width: 180px;
+      display: none;
+      flex-direction: column;
+    }
+
+    .dropdown a {
+      padding: 0.7rem 1rem;
+      color: var(--muted);
+    }
+
+    .dropdown a:hover {
+      background: #cfd8d3;
       color: var(--text);
     }
 
+    .menu-item:hover .dropdown {
+      display: flex;
+    }
+
+    .menu a:hover,
+    .menu-item:hover {
+      color: var(--text);
+    }
+
+    /* CONTENT */
     main {
       max-width: 900px;
       margin: auto;
@@ -113,9 +144,32 @@
 <header>
   <nav class="nav">
     <strong>Disemart Studio</strong>
+
     <div class="menu">
       <a href="index.html">Home</a>
+
+      <div class="menu-item">
+        Shop
+        <div class="dropdown">
+          <a href="#">Phone</a>
+          <a href="#">Camera</a>
+          <a href="#">Plant</a>
+        </div>
+      </div>
+
+      <a href="#">Portfolio</a>
       <a href="about.html">About Us</a>
+
+      <div class="menu-item">
+        Support
+        <div class="dropdown">
+          <a href="#">Announcements</a>
+          <a href="#">FAQ</a>
+          <a href="#">Artwork Care</a>
+          <a href="#">Shipping Policy</a>
+          <a href="#">Contact Us</a>
+        </div>
+      </div>
     </div>
   </nav>
 </header>
