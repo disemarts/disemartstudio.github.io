@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Disemart Studio</title>
+  <title>About Us — Disemart Studio</title>
 
   <style>
     :root {
-      --bg: #e6ebe7;          /* light xanadu */
-      --surface: #d8e0db;     /* cards */
-      --text: #1f2a26;        /* charcoal */
+      --bg: #e6ebe7;
+      --surface: #d8e0db;
+      --text: #1f2a26;
       --muted: #5f6f68;
-      --accent: #6f9e8f;      /* sage-teal */
+      --accent: #6f9e8f;
       --border: #c2ccc6;
     }
 
@@ -25,7 +25,7 @@
     body {
       background: var(--bg);
       color: var(--text);
-      line-height: 1.65;
+      line-height: 1.7;
     }
 
     a {
@@ -33,7 +33,6 @@
       color: inherit;
     }
 
-    /* NAVBAR */
     header {
       position: sticky;
       top: 0;
@@ -52,200 +51,59 @@
       align-items: center;
     }
 
-    .logo {
-      font-weight: 600;
-      letter-spacing: 0.4px;
-    }
-
     .menu {
       display: flex;
       gap: 2rem;
-      align-items: center;
-    }
-
-    .menu-item {
-      position: relative;
-      cursor: pointer;
       color: var(--muted);
     }
 
-    .menu a:hover,
-    .menu-item:hover {
+    .menu a:hover {
       color: var(--text);
     }
 
-    .dropdown {
-      position: absolute;
-      top: 120%;
-      left: 0;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      min-width: 190px;
-      display: none;
-      flex-direction: column;
-    }
-
-    .dropdown a {
-      padding: 0.75rem 1rem;
-      color: var(--muted);
-    }
-
-    .dropdown a:hover {
-      background: #cfd8d3;
-      color: var(--text);
-    }
-
-    .menu-item:hover .dropdown {
-      display: flex;
-    }
-
-    /* HERO */
-    .hero {
-      max-width: 1200px;
-      margin: auto;
-      padding: 6rem 2rem 4rem;
-      text-align: center;
-    }
-
-    .hero-top {
-      color: var(--muted);
-      letter-spacing: 2px;
-      font-size: 0.85rem;
-      margin-bottom: 1rem;
-    }
-
-    .hero h1 {
-      font-size: clamp(2.5rem, 5vw, 4rem);
-      margin-bottom: 1.5rem;
-    }
-
-    .hero p {
-      max-width: 760px;
-      margin: auto;
-      color: var(--muted);
-      margin-bottom: 2.5rem;
-    }
-
-    .hero-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      padding: 0.8rem 1.8rem;
-      border: 1px solid var(--accent);
-      background: transparent;
-      color: var(--accent);
-      cursor: pointer;
-      transition: 0.2s ease;
-    }
-
-    .btn.primary {
-      background: var(--accent);
-      color: #ffffff;
-    }
-
-    .btn:hover {
-      opacity: 0.85;
-    }
-
-    /* FEATURES */
-    .features {
-      max-width: 1200px;
-      margin: auto;
-      padding: 4rem 2rem;
-    }
-
-    .features h2 {
-      text-align: center;
-      margin-bottom: 3rem;
-      font-size: 2rem;
-    }
-
-    .feature-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .card {
-      background: var(--surface);
-      padding: 2rem;
-      border: 1px solid var(--border);
-    }
-
-    .card p {
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    /* ABOUT */
-    .about {
+    main {
       max-width: 900px;
       margin: auto;
       padding: 4rem 2rem;
     }
 
-    .about h2 {
-      margin-bottom: 1rem;
-      font-size: 2rem;
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
     }
 
-    .about h3 {
-      margin-bottom: 2rem;
-      color: var(--muted);
+    h2 {
+      font-size: 1.2rem;
       font-weight: 500;
+      color: var(--muted);
+      margin-bottom: 3rem;
     }
 
-    .about p {
-      margin-bottom: 1.5rem;
+    p {
+      margin-bottom: 1.6rem;
       color: var(--muted);
     }
 
-    .about ul {
-      margin-top: 1.5rem;
+    ul {
+      margin-top: 2rem;
       padding-left: 1.2rem;
+    }
+
+    li {
+      margin-bottom: 1rem;
       color: var(--muted);
     }
 
-    .about li {
-      margin-bottom: 0.8rem;
-    }
-
-    /* FOOTER */
     footer {
       border-top: 1px solid var(--border);
       margin-top: 4rem;
     }
 
-    .footer {
-      max-width: 1200px;
-      margin: auto;
-      padding: 3rem 2rem;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 2rem;
-    }
-
-    .footer a {
-      display: block;
-      color: var(--muted);
-      margin-bottom: 0.5rem;
-      font-size: 0.9rem;
-    }
-
-    .footer a:hover {
-      color: var(--text);
-    }
-
     .footer-bottom {
       text-align: center;
-      padding: 1rem;
-      color: var(--muted);
+      padding: 1.5rem;
       font-size: 0.85rem;
-      border-top: 1px solid var(--border);
+      color: var(--muted);
     }
   </style>
 </head>
@@ -254,130 +112,44 @@
 
 <header>
   <nav class="nav">
-    <div class="logo">Disemart Studio</div>
-
+    <strong>Disemart Studio</strong>
     <div class="menu">
-      <a href="#">Home</a>
-
-      <div class="menu-item">
-        Shop
-        <div class="dropdown">
-          <a href="#">Phone</a>
-          <a href="#">Camera</a>
-          <a href="#">Plant</a>
-        </div>
-      </div>
-
-      <a href="#">Portfolio</a>
-      <a href="#about">About Us</a>
-
-      <div class="menu-item">
-        Support
-        <div class="dropdown">
-          <a href="#">Announcements</a>
-          <a href="#">FAQ</a>
-          <a href="#">Artwork Care</a>
-          <a href="#">Shipping Policy</a>
-          <a href="#">Contact Us</a>
-        </div>
-      </div>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
     </div>
   </nav>
 </header>
 
-<section class="hero">
-  <div class="hero-top">ART · EDUCATION · PRESERVATION</div>
-  <h1>Teardown Art, Reimagined</h1>
-  <p>
-    Disemart Studio explores the hidden beauty of ordinary things, revealing the complex structures beneath them through detailed teardown artwork.
-  </p>
-
-  <div class="hero-buttons">
-    <a class="btn primary" href="#">Explore Shop</a>
-    <a class="btn" href="#">View Portfolio</a>
-  </div>
-</section>
-
-<section class="features">
-  <h2>Why Choose Us</h2>
-
-  <div class="feature-grid">
-    <div class="card">
-      <h3>Crafted with Care</h3>
-      <p>Hand-crafted pieces and limited edition prints created with passion and precision.</p>
-    </div>
-
-    <div class="card">
-      <h3>Curated Collections</h3>
-      <p>Thoughtfully selected products across phones, plants, and camera accessories.</p>
-    </div>
-
-    <div class="card">
-      <h3>Worldwide Shipping</h3>
-      <p>Fast, reliable delivery to your doorstep — wherever you are in the world.</p>
-    </div>
-
-    <div class="card">
-      <h3>Community First</h3>
-      <p>Join a growing community of art lovers and creative minds.</p>
-    </div>
-  </div>
-</section>
-
-<section class="about" id="about">
-  <h2>Our Story</h2>
-  <h3>About Us</h3>
+<main>
+  <h1>OUR STORY</h1>
+  <h2>About Us</h2>
 
   <p>
-    Disemart Studio is an indie art studio that transforms everyday objects into unique teardown artworks. Working with gadgets, appliances, items from daily life, and even elements inspired by nature, the studio turns familiar forms into carefully composed pieces that reveal what usually goes unseen.
+    Disemart Studio is an indie art studio that transforms everyday objects into unique teardown artworks. Working with gadgets, appliances, items from daily life, and even elements inspired by nature, the studio turns familiar forms into carefully composed pieces that reveal what usually goes unseen. Each artwork preserves the essence of its original object while presenting it as something artistic, collectible, and thought-provoking.
   </p>
 
   <p>
-    Established in 2026, Disemart Studio is shaped by research, observation, and methodical breakdown. Every body of work begins with close study, understanding how something is built before deciding how it should be represented.
+    Established in 2026, Disemart Studio is shaped by research, observation, and methodical breakdown. Every body of work begins with close study, understanding how something is built before deciding how it should be represented. The studio values patience over speed and depth over surface, treating the creative process as an act of inquiry rather than simple visual expression.
   </p>
 
   <p>
-    Traditionally, teardown is limited to technology, but Disemart Studio expands this approach further. Every object, whether produced by human hands or formed by natural processes, is made up of smaller elements, each serving a purpose beneath the exterior.
+    Traditionally, teardown is limited to technology, but Disemart Studio expands this approach further. Every object, whether produced by human hands or formed by natural processes, is made up of smaller elements, each serving a purpose beneath the exterior. These structures often remain hidden and unnoticed. By carefully disassembling and revealing them, the studio brings attention to the intelligence, design, and quiet complexity behind everyday forms.
   </p>
 
   <p>
-    The creation process involves disassembling, cleaning, redesigning, and framing each object with precision. Through this evolving practice, Disemart Studio continues to explore new objects and ideas.
+    The creation process involves disassembling, cleaning, redesigning, and framing each object with precision. This transformation allows ordinary items to retain their original character while offering a fresh perspective on their construction and meaning. Through this evolving practice, Disemart Studio continues to explore new objects and ideas, bringing teardown art into homes, offices, educational spaces and curated collections.
   </p>
+
+  <p>The resulting artworks are more than decoration. They function as…</p>
 
   <ul>
-    <li><strong>Conversation starters</strong> that spark curiosity</li>
-    <li><strong>Learning tools</strong> that reveal inner structure and mechanics</li>
-    <li><strong>Collectible pieces</strong> designed to be displayed and curated</li>
+    <li><strong>conversation starters</strong> that spark curiosity.</li>
+    <li><strong>learning tools</strong> that reveal inner structure and mechanics.</li>
+    <li><strong>collectible pieces</strong> designed to be displayed, curated, and grown into a personal series.</li>
   </ul>
-</section>
+</main>
 
 <footer>
-  <div class="footer">
-    <div>
-      <h4>Disemart Studio</h4>
-      <p style="color:var(--muted);font-size:0.9rem;">
-        Teardown art exploring the hidden beauty of everyday objects.
-      </p>
-    </div>
-
-    <div>
-      <h4>Quick Links</h4>
-      <a href="#">Home</a>
-      <a href="#">Shop</a>
-      <a href="#">Portfolio</a>
-      <a href="#about">About Us</a>
-    </div>
-
-    <div>
-      <h4>Support</h4>
-      <a href="#">Announcements</a>
-      <a href="#">FAQ</a>
-      <a href="#">Artwork Care</a>
-      <a href="#">Shipping Policy</a>
-      <a href="#">Contact Us</a>
-    </div>
-  </div>
-
   <div class="footer-bottom">
     © 2026 Disemart Studio. All rights reserved.
   </div>
